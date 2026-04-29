@@ -4,11 +4,12 @@
 async function main() {
 const users = await fetch("https://jsonplaceholder.typicode.com/users");
 const usersData = await users.json();
-console.log
-usersData
-  .map(
-    (user) => <div class="user-card">
-<div class="user-card__container">
+console.log(usersData);
+
+const usersHTML = usersData
+  .map((user) => (
+  <div class="user-card">
+    <div class="user-card__container">
        <h3>User's Name</h3>
          <p><b>Email:</b> email@email.com</p>
          <p><b>Phone:</b> 0000000000</p>
